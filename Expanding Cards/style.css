@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+*, ::after, ::after{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    
+    overflow: hidden;
+    align-items: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    flex-direction: row;
+}
+.panel{
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+.panel h3{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    margin: 0%;
+    opacity: 0;
+}
+.panel.active{
+    flex: 5;
+}
+.panel.active h3{
+    opacity: 100%;
+}
+@media (max-width: 480px) {
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-child(4),.panel:nth-child(5){
+        display: none;
+    }
+}
